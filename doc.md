@@ -1,3 +1,4 @@
+### Basic Server
 1. 
 ```
 go mod init github.com/anushasgorawar/gRPC.git 
@@ -41,3 +42,10 @@ If you want curl to work, you need to send proper HTTP response headers.
 
 	_, err := conn.Write([]byte(response))
 ```
+
+## gPRC
+
+1. import grpc package
+'go get google.golang.org/grpc'
+
+2. 
