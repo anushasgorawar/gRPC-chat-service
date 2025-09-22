@@ -21,6 +21,9 @@ postman can't help to test grpc. No native support.
 
 http.ListenAndServe : high-level HTTP server that internally uses net.Listen("tcp", addr) but also handles the full HTTP protocol for you.
 
+When using net.listen:
+Your Go program is a raw TCP server, not an HTTP server.
+
 Option 1: Keep it a raw TCP server
 
 Don’t use curl — just test with nc (netcat) or telnet:

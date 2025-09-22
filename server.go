@@ -6,7 +6,7 @@ import (
 )
 
 func main() {
-	listen, err := net.Listen("tcp", "localhost:8085")
+	listen, err := net.Listen("tcp", ":8085")
 	if err != nil {
 		log.Fatal("Could not start server: ", err)
 	}
