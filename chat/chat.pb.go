@@ -23,7 +23,7 @@ const (
 
 type Message struct {
 	state         protoimpl.MessageState `protogen:"open.v1"`
-	Body          string                 `protobuf:"bytes,1,opt,name=body,proto3" json:"body,omitempty"` // first position
+	Body          string                 `protobuf:"bytes,1,opt,name=Body,proto3" json:"Body,omitempty"` // first position
 	unknownFields protoimpl.UnknownFields
 	sizeCache     protoimpl.SizeCache
 }
@@ -72,7 +72,7 @@ const file_chat_proto_rawDesc = "" +
 	"\n" +
 	"chat.proto\x12\x04chat\"\x1d\n" +
 	"\aMessage\x12\x12\n" +
-	"\x04body\x18\x01 \x01(\tR\x04body29\n" +
+	"\x04Body\x18\x01 \x01(\tR\x04Body29\n" +
 	"\vChatService\x12*\n" +
 	"\bSayHello\x12\r.chat.Message\x1a\r.chat.Message\"\x00B\aZ\x05/chatb\x06proto3"
 

@@ -3,7 +3,7 @@ https://www.youtube.com/watch?v=BdzYdN_Zd9Q
 
 1. https://grpc.io/docs/languages/go/quickstart/
 ```
-go mod init github.com/anushasgorawar/gRPC.git 
+go mod init github.com/anushasgorawar/gRPC-chat-service
 go get google.golang.org/grpc
 go get github.com/golang/protobuf
 go get github.com/golang/protobuf/proto
@@ -99,4 +99,4 @@ It takes two arguments:
 
 8. grpc service is now able to expose SayHello function of the chat service.
 
-9. 
+SayHello method is registered with GRPC
