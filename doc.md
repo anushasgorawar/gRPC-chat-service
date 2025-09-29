@@ -116,3 +116,9 @@ To see what APIs they have:
   "Body": "hello from the server"
 }
 ```
+
+With reflection, the server can tell the client about its own services and methods at runtime.
+
+It’s like asking the server: “What functions do you have, and what inputs do they take?”
+
+It's usually turned off in prod because of leakage and unintended exposure.
