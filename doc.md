@@ -77,7 +77,7 @@ tool that reads our .proto files and generates code.
 --go_out = where to put the generated code of message
 --go-grpc_out = where to put the service code of message
 
-need to write `option go_package = "option go_package = "/chat";`
+need to write `option go_package = "/chat";`
 
 protoc --go_out=. --go-grpc_out=. chat.proto
 
@@ -100,3 +100,19 @@ It takes two arguments:
 8. grpc service is now able to expose SayHello function of the chat service.
 
 SayHello method is registered with GRPC
+
+9. To use cli:
+
+
+	`reflection.Register(gRPCserver)`
+
+To see what APIs they have:
+`grpcurl -plaintext localhost:8080 list`
+
+```
+(base) Anushas-MacBook-Air:gRPC anushasg$ grpcurl -plaintext -d '{"Body": "Hello from CLI"}' localhost:80
+80 chat.ChatService/SayHello
+{
+  "Body": "hello from the server"
+}
+```

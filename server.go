@@ -6,6 +6,7 @@ import (
 
 	"github.com/anushasgorawar/gRPC-chat-service/chat"
 	"google.golang.org/grpc"
+	"google.golang.org/grpc/reflection"
 )
 
 func main() {
@@ -21,6 +22,7 @@ func main() {
 	gRPCserver := grpc.NewServer()
 
 	chat.RegisterChatServiceServer(gRPCserver, &s)
+	reflection.Register(gRPCserver)
 	if err := gRPCserver.Serve(listener); err != nil {
 		log.Fatal("Could not start grpc server: ", err)
 	}
